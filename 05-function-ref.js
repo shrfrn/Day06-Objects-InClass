@@ -41,6 +41,22 @@ function boo() {
 }
 runThisFunc(boo)
 
+// Slide 96 - passing a function ref as an argument
+function runThisFuncInLoop(func) {
+    console.log('About to run func 10 times...')
+    var i = 10
+    while (i) {
+        func(i)
+        i--
+    }
+    // Log the parameter to show that it points to a function
+    console.log(func);
+}
+function goo(i) {
+    console.log('goo', i)
+}
+// runThisFuncInLoop(goo)
+
 // Slide 97 anonymous functions
 
 // setTimeout(function () { alert('Times up!') }, 3000)
